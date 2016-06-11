@@ -1,0 +1,42 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "owner",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login"
+        }
+    ],
+    "fields": [
+
+        {
+            "fieldName": "date",
+            "fieldType": "Date"
+        },
+        {
+            "fieldName": "breakfast",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "brunch",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lunch",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tea",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dinner",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160609145820",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "date_event",
+    "pagination": "pager"
+}

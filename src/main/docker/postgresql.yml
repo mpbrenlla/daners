@@ -1,0 +1,12 @@
+version: '2'
+services:
+    daners-postgresql:
+        container_name: daners-postgresql
+        image: postgres:9.5.2
+        # volumes:
+        #     - ~/volumes/jhipster/daners/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=daners
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

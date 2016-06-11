@@ -1,0 +1,72 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDateEventLabel">Create or edit a Date Event</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.dateEvent.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.dateEvent.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_date">Fecha</label>
+                <div class="input-group">
+                    <input ng-disabled="true" id="field_date" type="text" class="form-control" name="date" datetime-picker="{{dateformat}}" ng-model="vm.dateEvent.date" is-open="vm.datePickerOpenStatus.date"
+                      />
+                    <span class="input-group-btn">
+                        <button ng-disabled="true" type="button" class="btn btn-default" ng-click="vm.openCalendar('date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_breakfast">Desayuno</label>
+            <input type="text" class="form-control" name="breakfast" id="field_breakfast"
+                    ng-model="vm.dateEvent.breakfast"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_brunch">Media Mañana</label>
+            <input type="text" class="form-control" name="brunch" id="field_brunch"
+                    ng-model="vm.dateEvent.brunch"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_lunch">Comida</label>
+            <input type="text" class="form-control" name="lunch" id="field_lunch"
+                    ng-model="vm.dateEvent.lunch"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_tea">Merienda</label>
+            <input type="text" class="form-control" name="tea" id="field_tea"
+                    ng-model="vm.dateEvent.tea"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_dinner">Cena</label>
+            <input type="text" class="form-control" name="dinner" id="field_dinner"
+                    ng-model="vm.dateEvent.dinner"
+                     />
+        </div>
+
+       <!-- <div class="form-group">
+            <label for="field_owner">Owner</label>
+            <select class="form-control" id="field_owner" name="owner" ng-model="vm.dateEvent.owner" ng-options="user as user.login for user in vm.users track by user.id">
+                <option value=""></option>
+            </select>
+        </div> -->
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

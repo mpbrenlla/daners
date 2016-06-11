@@ -1,0 +1,42 @@
+
+<div>
+    <h2><span>Date Event</span> {{vm.dateEvent.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Date</span></dt>
+        <dd>
+            <span>{{vm.dateEvent.date | date:'medium'}}</span>
+        </dd>
+        <dt><span>Breakfast</span></dt>
+        <dd>
+            <span>{{vm.dateEvent.breakfast}}</span>
+        </dd>
+        <dt><span>Brunch</span></dt>
+        <dd>
+            <span>{{vm.dateEvent.brunch}}</span>
+        </dd>
+        <dt><span>Lunch</span></dt>
+        <dd>
+            <span>{{vm.dateEvent.lunch}}</span>
+        </dd>
+        <dt><span>Tea</span></dt>
+        <dd>
+            <span>{{vm.dateEvent.tea}}</span>
+        </dd>
+        <dt><span>Dinner</span></dt>
+        <dd>
+            <span>{{vm.dateEvent.dinner}}</span>
+        </dd>
+        <dt><span>Owner</span></dt>
+        <dd>
+            {{vm.dateEvent.owner.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

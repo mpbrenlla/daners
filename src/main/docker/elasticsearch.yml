@@ -1,0 +1,10 @@
+version: '2'
+services:
+    daners-elasticsearch:
+        container_name: daners-elasticsearch
+        image: elasticsearch:1.7.5
+        # volumes:
+        #     - ~/volumes/jhipster/daners/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300
